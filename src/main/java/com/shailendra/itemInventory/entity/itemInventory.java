@@ -20,6 +20,9 @@ public class itemInventory {
     @Column
     private String demandQty;
 
+    public itemInventory() {
+    }
+
     public itemInventory(int itemId, String supplyQty, String demandQty) {
         this.itemId = itemId;
         this.supplyQty = supplyQty;
