@@ -5,8 +5,6 @@ import com.shailendra.itemInventory.repository.itemInventoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Optional;
-
 @Service
 public class itemInventoryService {
 
@@ -17,7 +15,7 @@ public class itemInventoryService {
         this.inventoryRepository = inventoryRepository;
     }
 
-    public Optional<itemInventory> getInventory(int itemId){
-        return inventoryRepository.findById(itemId);
+    public itemInventory getInventory(int itemId){
+       return inventoryRepository.findById(itemId).orElseThrow();
     }
 }

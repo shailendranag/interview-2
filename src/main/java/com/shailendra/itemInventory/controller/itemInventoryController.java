@@ -22,7 +22,7 @@ public class itemInventoryController {
     }
 
     @GetMapping("/{itemId}")
-    public Optional<itemInventory> getInventoryRecord(@PathVariable int itemId){
+    public itemInventory getInventoryRecord(@PathVariable int itemId){
         return itemInventoryService.getInventory(itemId);
     }
 }
